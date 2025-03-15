@@ -38,13 +38,13 @@ if uploaded_file is not None:
                 response = startup_data.iloc[0]["What is your company going to make? Please describe your product and what it does or will do."]
 
             elif "founders of" in query:
-            response = startup_data.iloc[0]["Founder Names"]
+                response = startup_data.iloc[0]["Founder Names"]
 
             elif "demo link" in query:
-            response = startup_data.iloc[0]["If\n you have a demo, what's the url? Demo can be anything that shows us how\n the product works. Usually that's a video or screen recording."]
+                response = startup_data.iloc[0]["If\n you have a demo, what's the url? Demo can be anything that shows us how\n the product works. Usually that's a video or screen recording."]
 
             elif "pitch deck" in query:
-            response = startup_data.iloc[0]["Any pitch deck? Please share"]
+                response = startup_data.iloc[0]["Any pitch deck? Please share"]
 
         st.write(response)
 
