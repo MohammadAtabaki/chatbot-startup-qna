@@ -11,7 +11,7 @@ from google.colab import files
 
 uploaded = files.upload()
 
-!pip install streamlit pyngrok pandas seaborn
+
 
 import pandas as pd
 import streamlit as st
