@@ -1,7 +1,9 @@
-streamlit
+spacy
+fuzzywuzzy
+python-Levenshtein
 pandas
 seaborn
 matplotlib
 openpyxl
-fuzzywuzzy
-spacy
+streamlit
+spacy-lookups-data
