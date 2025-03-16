@@ -1,15 +1,23 @@
 import streamlit as st
 import pandas as pd
 import spacy
+import subprocess
 from fuzzywuzzy import process
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Load NLP Model
-nlp = spacy.load("en_core_web_sm")
+# Install spaCy model if not available
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    st.write("Installing spaCy model...")
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
+
+# Streamlit UI
+st.title("Smart Startup Chatbot")
 
 # File uploader
-st.title("Smart Startup Chatbot")
 uploaded_file = st.file_uploader("Upload Application Database.xlsx", type=["xlsx"])
 
 if uploaded_file is not None:
